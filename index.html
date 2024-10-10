@@ -13,13 +13,13 @@
       <nav class="header__menu">
         <ul class="header__links-list">
           <li class="header__links-list-item_no-bullit">
-            <a href="#" class="header__link">главная</a>
+            <a href="#0" class="addres__link-active">главная</a>
           </li>
           <li class="header__links-list-item">
-            <a href="#" class="header__link_active ">посмотреть лоты</a>
+            <a href="#" class="header__link">посмотреть лоты</a>
           </li>
           <li class="header__links-list-item ">
-            <a href="#" class="header__link_active">об аукционе</a>
+            <a href="#" class="header__link">об аукционе</a>
           </li>
         </ul>
       </nav>
@@ -32,21 +32,22 @@
       </a>
       <address class="address header__address">
         <ul>
-          <li class="header__addres-link">
+          <li class="addres-link">
             <a href="tel:+99995555555">+9 999 555 5555</a>
           </li>
-          <li class="header__addres-link">
+          <li class="addres-link">
             <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
           </li>
-          <li class="header__links-list-item_no-bullit">
-            <a href="#0">наб. Принсенграхт 263- 265, Амстердам</a>
+          <li class="address__links-list-item_no-bullit">
+            <a href="#0" class="addres__link-active">наб. Принсенграхт 263- 265, Амстердам</a>
           </li>
         </ul>
       </address>
      </header>
     <main>
-      <section class="cover">
-        <div class="overlay">
+      <!-- Тут я не вкладывал содержимое в линзу , я использую Псевдоэлемет для overlay, 
+       чтобы не было пустых div!  -->
+      <section class="cover overlay">
           <h1 class="cover__title">
             <span class="aligned-text">о<span class="letter-spacing-extended">но</span></span>
             <span class=" aligned-text aligned-text_center">те<span class="letter-spacing-extended">бе</span></span>
@@ -56,11 +57,10 @@
           <h2 class="cover__description-text">
             Аукцион вещей, в которые никто не верил
           </h2>
-          <button class="bet-button">
+          <button class="bet-button" type="button">
             сделать ставку 
           </button>
-        </div>
-        </div>    
+        </div> 
       </section>
       <section class="lots">
         <h2 class="lots__heading">
@@ -69,11 +69,10 @@
         <ul class="lots__card-list">
           <li class="lots__card-list-item">
             <a class="card-link">
-              <article class="card card_type_film">
-                <div class="overlay"></div>
-                <h2 class="card__title">
+              <article class="card card_type_film overlay">
+                <h3 class="card__title">
                   Фильм режиссёра, который бросил киношколу
-                </h2>
+                </h3>
                 <p class="card__text">
                   Не просто бросил, а ушёл 
                   с первой лекции. 
@@ -86,8 +85,7 @@
           </li>
           <li class="lots__card-list-item">
             <a class="card-link">
-              <article class="card card_type_book">
-                <div class="overlay"></div>
+              <article class="card card_type_book overlay">
                 <h2 class="card__title">
                   Книга, где описан 
                   один скучный день
@@ -115,8 +113,7 @@
           </li>
           <li class="lots__card-list-item">
             <a class="card-link">
-              <article class="card card_type_picture">
-                <div class="overlay"></div>
+              <article class="card card_type_picture overlay">
                 <h2 class="card__title">
                   Картина, которую 
                   повторит даже 5-
@@ -180,14 +177,14 @@
     <footer class="footer">
       <address class="address">
         <ul>
-          <li class="header__addres-link">
+          <li class="addres-link">
             <a href="tel:+99995555555">+9 999 555 5555</a>
           </li>
-          <li class="header__addres-link">
+          <li class="addres-link">
             <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
           </li>
-          <li class="header__links-list-item_no-bullit">
-            наб. Принсенграхт 263- 265, Амстердам
+          <li class="address__links-list-item_no-bullit">
+            <a href="#0" class="addres__link-active">наб. Принсенграхт 263- 265, Амстердам</a>
           </li>
         </ul>
       </address>
@@ -207,7 +204,7 @@
       <div>
         <ul class="footer__social-list">
           <li class="footer__menu-list-item">
-            <a href="#0" class="footer__social-link">
+            <a href="#0" class="footer__social-link" target="_blank">
               <img 
                 src="./images/yt.svg" 
                 alt="ссылка на ютуб"
